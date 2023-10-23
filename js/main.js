@@ -1,3 +1,4 @@
+  //TASK 1
 /*const array = [0, 1, 's', '+', {}, 5, 6, 7, 'k'];
 const averageOfNumbers = function(anyArray) {
   const arrayOfNumbers = anyArray.filter(number => isNaN(number) === false);
@@ -13,6 +14,7 @@ const averageOfNumbers = function(anyArray) {
 const result = averageOfNumbers(array);
 document.write('Task 1: ' + result);*/
 
+  //TASK 2
 /*const doMath = function(x, znak, y) {
   if(isNaN(x) || isNaN(y)) {
     return alert('Given value is not a number');
@@ -47,7 +49,8 @@ const y = +prompt('Enter second number');
 const znak = prompt('Enter action'); 
 doMath(x, znak, y);*/
 
-const fillArray = function(someArray) {
+  //TASK 3
+/*const fillArray = function(someArray) {
 const lengthOfMainArray = prompt('Enter length of main array');
 if(lengthOfMainArray === null) {
   alert('Sorry, but you refused to enter value');
@@ -86,4 +89,25 @@ for(let i = 0; i < someArray.length; i++) {
 } 
 const newArray = [];
 fillArray(newArray);
-document.write(JSON.stringify(newArray));
+document.write(JSON.stringify(newArray));*/
+
+  //TASK 4
+const removeSymbol = function(someString, symbolsToRemove) {
+  const messageEmptyString = 'You didnt enter any string';
+  if(someString === null) {
+    return messageEmptyString;
+  }
+  if(symbolsToRemove === null) {
+    return someString;
+  }
+  for(let i = 0; i < symbolsToRemove.length; i++) {
+    if(someString.includes(symbolsToRemove[i]) && symbolsToRemove[i] !== ' ') {
+      someString = someString.replaceAll(symbolsToRemove[i], '');
+    }
+  }
+  return someString;
+}
+const userString = prompt('Enter any string');
+const userSymbolRemove = prompt('Enter symbols to remove');
+const finalString = removeSymbol(userString, userSymbolRemove);
+document.write(finalString);
