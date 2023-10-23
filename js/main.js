@@ -1,5 +1,5 @@
   //TASK 1
-/*const array = [0, 1, 's', '+', {}, 5, 6, 7, 'k'];
+const array = [0, 1, 's', '+', {}, 5, 6, 7, 'k'];
 const averageOfNumbers = function(anyArray) {
   const arrayOfNumbers = anyArray.filter(number => isNaN(number) === false);
   if(arrayOfNumbers.length === 0) {
@@ -12,7 +12,7 @@ const averageOfNumbers = function(anyArray) {
   return averageResult;
 }
 const result = averageOfNumbers(array);
-document.write('Task 1: ' + result);*/
+document.write('Task 1: ' + result);
 
   //TASK 2
 /*const doMath = function(x, znak, y) {
@@ -92,7 +92,7 @@ fillArray(newArray);
 document.write(JSON.stringify(newArray));*/
 
   //TASK 4
-const removeSymbol = function(someString, symbolsToRemove) {
+/*const removeSymbol = function(someString, symbolsToRemove) {
   const messageEmptyString = 'You didnt enter any string';
   if(someString === null) {
     return messageEmptyString;
@@ -110,4 +110,4 @@ const removeSymbol = function(someString, symbolsToRemove) {
 const userString = prompt('Enter any string');
 const userSymbolRemove = prompt('Enter symbols to remove');
 const finalString = removeSymbol(userString, userSymbolRemove);
-document.write(finalString);
+document.write(finalString);*/
