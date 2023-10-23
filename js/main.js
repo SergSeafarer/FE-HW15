@@ -13,7 +13,7 @@ const averageOfNumbers = function(anyArray) {
 const result = averageOfNumbers(array);
 document.write('Task 1: ' + result);*/
 
-const doMath = function(x, znak, y) {
+/*const doMath = function(x, znak, y) {
   if(isNaN(x) || isNaN(y)) {
     return alert('Given value is not a number');
   }
@@ -45,4 +45,45 @@ const doMath = function(x, znak, y) {
 const x = +prompt('Enter first number');
 const y = +prompt('Enter second number');
 const znak = prompt('Enter action'); 
-doMath(x, znak, y);
+doMath(x, znak, y);*/
+
+const fillArray = function(someArray) {
+const lengthOfMainArray = prompt('Enter length of main array');
+if(lengthOfMainArray === null) {
+  alert('Sorry, but you refused to enter value');
+  return;
+}
+if(+lengthOfMainArray === 0 || +lengthOfMainArray < 0 || isNaN(+lengthOfMainArray)) {
+  alert ('Incorrect length value entered');
+  return;
+}
+someArray.length = +lengthOfMainArray;
+for(let i = 0; i < someArray.length; i++) {
+  let lengthOfInternalArray = prompt('Enter length of ' + (i+1) + ' internal array');
+  if(lengthOfInternalArray === null) {
+    alert('Sorry, but you refused to enter value');
+    break;
+  }
+  if(+lengthOfInternalArray === 0 || +lengthOfInternalArray < 0 || isNaN(+lengthOfInternalArray)) {
+    alert('Incorrect length value entered');
+    break;
+  }
+  let internalArray = new Array(+lengthOfInternalArray);
+  someArray[i] = internalArray;
+  for(let k = 0; k < someArray[i].length; k++) {
+    let elements = prompt('Enter elements for this array');
+    if(elements === null) {
+      alert('Sorry, you refused to enter value');
+      break;
+    }
+    if(isNaN(elements)) {
+    someArray[i][k] = elements;
+    } else {
+      someArray[i][k] = +elements;
+    }
+  }
+} 
+} 
+const newArray = [];
+fillArray(newArray);
+document.write(JSON.stringify(newArray));
